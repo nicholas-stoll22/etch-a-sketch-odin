@@ -7,7 +7,27 @@
     <title>Etch-a-Sketch</title>
 </head>
 <body>
-    
+    <div class="header">
+        <div class="btn">
+            <button id="openModal">Generate Grid</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-inner">
+            <form id="form">
+                <fieldset>
+                <legend>Grid Creation</legend>
+                    <p>
+                        How big do you want your grid to be? <input type = "text" name = "val" />
+                    </p>
+                  <input id="closeModal" type = "submit" name = "submit" value = "Submit" />
+                </p>
+            </fieldset>
+            </form>
+        </div>
+    </div>
+
     <div class="flex-container">
         <div class="sketch-container">
           <div class="sketch-screen">

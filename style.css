@@ -4,7 +4,6 @@
   }
   
 .body {
-    background-color: #7d7d7d;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -15,23 +14,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 16px;
+    padding-top: 1.5%;
+    padding-bottom: 2%;
 }
 
 .sketch-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 800px;
     height: 800px;
-    padding-top: 50px;
 }
 
 .sketch-screen {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 600px;
-    height: 600px;
+    width: 750px;
+    height: 750px;
     background-color: #bfbfbf;
 }
 
@@ -48,5 +48,41 @@
 
 .sketch-screen>div>* {
     flex: 1;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.modal {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-inner {
+    background-color: white;
+    height: 175px;
+    width: 175px;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.modal.open {
+    opacity: 1;
+    z-index: 999;
 }
   
