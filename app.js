@@ -10,6 +10,7 @@ function sketchBoard(size) {
         col.appendChild(row);
       }
       screen.appendChild(col);
+      console.log(screen)
     }
   }
 
@@ -18,6 +19,7 @@ const closeBtn = document.getElementById("closeModal");
 const modal = document.getElementById("modal");
 
 openBtn.addEventListener("click", () => {
+  reset();
   modal.classList.add("open");
 });
 
@@ -30,6 +32,12 @@ document.querySelector('form').addEventListener('submit', (e) => {
   const data = Object.fromEntries(new FormData(e.target).entries());
   userGenerate(data);
 });
+
+function reset() {
+  document
+    .querySelectorAll(".column")
+    .forEach((e) => e.parentNode.removeChild(e));
+}
 
 function userGenerate(data){
   let gridSize = data["val"]
